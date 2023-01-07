@@ -18,12 +18,11 @@ pipeline {
                 message "Let's promote?"
                 ok 'Choose'
                 parameters {
-                    extendedChoice defaultValue: 'blue,green,yellow,blue', description: '', descriptionPropertyValue: 'blue,green,yellow,blue', multiSelectDelimiter: ',', name: 'favColor', quoteValue: false, saveJSONParameterToFile: false, type: 'PT_MULTI_SELECT', value: 'blue,green,yellow,blue', visibleItemCount: 5
+                    multipleChoice(name: 'Environments', choices: ["prod", "eu", "test", "mgmt"], description: 'Environments to create parameter in'),
+                string(name: 'Path', description: 'SSM Parameter Path'),
+                text(name: 'Value', description: 'Parameter Value')
                 }
-            }
-            steps {
-                echo "Your favorite color is ${favColor}"
-            }
+            }    
         }
         
         stage('Deploy') {
