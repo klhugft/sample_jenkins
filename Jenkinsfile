@@ -18,7 +18,7 @@ pipeline {
                 message "Let's promote?"
                 ok 'Choose'
                 parameters {
-                    extendedChoice multiSelectDelimiter: ',', propertyFile: 'test.properties', name: 'lets try', quoteValue: false, saveJSONParameterToFile: false, type: 'PT_CHECKBOX'
+                    extendedChoice multiSelectDelimiter: ',', propertyFile: 'test', name: 'lets try', quoteValue: false, saveJSONParameterToFile: false, type: 'PT_CHECKBOX'
                 }
             }
             steps {
