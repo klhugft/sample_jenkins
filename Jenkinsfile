@@ -23,6 +23,9 @@ pipeline {
                 }
 
             }
+            steps {
+                echo 'choice is ...'
+            }
         }
         
         stage('Deploy') {
