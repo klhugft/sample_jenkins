@@ -19,7 +19,7 @@ pipeline {
                 ok 'Choose'
                 feed_list = [a,b,c,d]
                 parameters {
-                    extendedChoice choices: feed_list , description: '', descriptionPropertyValue: 'blue,green,yellow,blue', multiSelectDelimiter: ',', name: 'favColor', quoteValue: false, saveJSONParameterToFile: false, type: 'PT_CHECKBOX', value: 'blue,green,yellow,blue', visibleItemCount: 5
+                    editableChoice choices: feed_list , description: '', multiSelectDelimiter: ',', name: 'favColor', quoteValue: false, saveJSONParameterToFile: false, type: 'PT_CHECKBOX'
                 }
             }
             steps {
