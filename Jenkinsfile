@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     parameters {
-        hidden(name: "TRY" defaultValue: "432452345")
+        hidden(name: "TRY", defaultValue: "432452345")
     }
 
     stages {
