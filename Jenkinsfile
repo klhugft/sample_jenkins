@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    parameters {
+        hidden(name: "TRY" defaultValue: "432452345")
+    }
+
     stages {
         stage('Build') {
             steps {
@@ -20,6 +24,7 @@ pipeline {
                 
                 parameters {
                     extendedChoice multiSelectDelimiter: ',', name: 'vendorTypeList', propertyFile: '/Users/klhu/Desktop/test/test.properties', propertyKey: 'prop1', quoteValue: false, saveJSONParameterToFile: false, type: 'PT_CHECKBOX', visibleItemCount: 5
+
                 }
 
             }
@@ -36,3 +41,6 @@ pipeline {
         }
     }
 }
+
+choice(chocies: feed_list)
+extendedCoice (values: a,b,c, )
