@@ -1,10 +1,6 @@
 pipeline {
     agent any
-
-    parameters {
-        (name: "TRY", defaultValue: "432452345")
-    }
-
+    
     stages {
         stage('Build') {
             steps {
