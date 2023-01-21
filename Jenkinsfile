@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    
+
     stages {
         stage('Build') {
             steps {
@@ -38,5 +38,3 @@ pipeline {
     }
 }
 
-choice(chocies: feed_list)
-extendedCoice (values: a,b,c, )
