@@ -20,10 +20,12 @@ pipeline {
                 
                 parameters {
                     extendedChoice multiSelectDelimiter: ',', name: 'vendorTypeList', propertyFile: '/Users/klhu/Desktop/test/test.properties', propertyKey: 'prop1', quoteValue: false, saveJSONParameterToFile: false, type: 'PT_CHECKBOX', visibleItemCount: 5
-                    string([$class     : 'WHideParameterDefinition',
+                    
+                }
+
+                parameters ([$class     : 'WHideParameterDefinition',
                         name       : 'HIDDEN_PARAM',
                         description: 'Hidden param for...'])
-                }
 
             }
             steps {
