@@ -34,6 +34,10 @@ pipeline {
         
         stage('Deploy') {
             input {
+
+                message "Let's promote?"
+                ok 'Choose'
+                
                 parameters (
                     [$class     : 'WHideParameterDefinition',
                     name       : 'HIDDEN_PARAM',
