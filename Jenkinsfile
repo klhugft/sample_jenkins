@@ -38,7 +38,7 @@ pipeline {
                     script {
                     properties([
                             parameters([
-                                [$class: 'WHideParameterDefinition', 
+                                [$class: 'WHideParameter', 
                                     name: 'HIDDEN_PARAM', 
                                     description: 'Select the Environemnt from the Dropdown List', 
                                     filterLength: 1, 
