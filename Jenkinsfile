@@ -38,12 +38,11 @@ pipeline {
                     script {
                     properties([
                             parameters([
-                                [$class: 'ChoiceParameter', 
-                                    choiceType: 'PT_SINGLE_SELECT', 
+                                [$class: 'WHideParameterDefinition', 
+                                    name: 'HIDDEN_PARAM', 
                                     description: 'Select the Environemnt from the Dropdown List', 
                                     filterLength: 1, 
                                     filterable: false, 
-                                    name: 'Env', 
                                     script: [
                                         $class: 'GroovyScript', 
                                         fallbackScript: [
