@@ -37,12 +37,15 @@ pipeline {
 
                 message "Let's promote?"
                 ok 'Choose'
-                
+
                 parameters (
                     [$class     : 'WHideParameterDefinition',
                     name       : 'HIDDEN_PARAM',
                     description: 'Hidden param for...']
                 )
+            }
+            steps {
+                echo 'choice is ...'
             }
         }
     }
