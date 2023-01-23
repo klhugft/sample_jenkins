@@ -41,21 +41,7 @@ pipeline {
                                 [$class: 'WHideParameterDefinition', 
                                     name: 'HIDDEN_PARAM', 
                                     description: 'Select the Environemnt from the Dropdown List', 
-                                    filterLength: 1, 
-                                    filterable: false, 
-                                    script: [
-                                        $class: 'GroovyScript', 
-                                        fallbackScript: [
-                                            classpath: [], 
-                                            sandbox: false, 
-                                            script: 
-                                                "return['Could not get The environemnts']"
-                                        ], 
-                                        script: [
-                                            classpath: [], 
-                                            sandbox: false, 
-                                            script: 
-                                                "return['dev','stage','prod']"
+                                    value: 'sdasdasdasdasd'
                                         ]
                                     ]
                                 ]
