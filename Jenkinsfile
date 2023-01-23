@@ -1,6 +1,7 @@
 pipeline {
     agent any
 
+
     stages {
         stage('Build') {
             steps {
@@ -23,9 +24,7 @@ pipeline {
                     
                 }
 
-                parameters ([$class     : 'WHideParameterDefinition',
-                        name       : 'HIDDEN_PARAM',
-                        description: 'Hidden param for...'])
+                
 
             }
             steps {
@@ -34,9 +33,9 @@ pipeline {
         }
         
         stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-        
+            parameters ([$class     : 'WHideParameterDefinition',
+                        name       : 'HIDDEN_PARAM',
+                        description: 'Hidden param for...'])
             }
         }
     }
