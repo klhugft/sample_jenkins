@@ -33,9 +33,12 @@ pipeline {
         }
         
         stage('Deploy') {
-            parameters ([$class     : 'WHideParameterDefinition',
-                        name       : 'HIDDEN_PARAM',
-                        description: 'Hidden param for...'])
+            input {
+                parameters (
+                    [$class     : 'WHideParameterDefinition',
+                    name       : 'HIDDEN_PARAM',
+                    description: 'Hidden param for...']
+                )
             }
         }
     }
