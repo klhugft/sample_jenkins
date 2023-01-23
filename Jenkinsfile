@@ -43,10 +43,8 @@ pipeline {
                                     description: 'Select the Environemnt from the Dropdown List', 
                                     value: 'sdasdasdasdasd'
                                         ]
-                                    ]
-                                ]
+                                    ])
                             ])
-                    ])
                     }
                 }
         
